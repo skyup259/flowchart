@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link href="jquery.flowchart.css" rel="stylesheet">
+		<script src="jquery/jquery.js"></script>
+		<script src="jquery-ui.min.js"></script>
+		 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="http://timmywil.github.io/jquery.panzoom/dist/jquery.panzoom.js"></script>
+		<script type="text/javascript" src="flowchart/jquery.flowchart.js"></script>
+		
+	</head>
+	<body style="cursor: auto;">
+		<div class="flowchart-example-container flowchart-container" id="example_1">
+			<svg class="flowchart-links-layer"></svg>
+			<div class="flowchart-operators-layer unselectable">
+				<div class="flowchart-operator flowchart-default-operator ui-draggable" style="top: 20px; left: 20px;">
+					<div class="flowchart-operator-title ui-draggable-handle">operator</div>
+					<div class="flowchart-operator-inputs-outputs">
+						<div class="flowchart-operator-inputs"></div>
+						<div class="flowchart-operator-outputs"></div>
+
+					</div>
+
+				</div>
+			</div>	
+		</div>
+
+
+<script>
+	$(document).ready(function() {
+    var data = {
+      operators: {
+        operator: {
+          top: 20,
+          left: 20,
+          properties: {
+            title: 'Operator',
+            inputs: {
+              input_1: {
+                label: 'Input 1',
+              },
+              input_2: {
+                label: 'Input 2',
+              }
+            },
+            outputs: {
+              output_1: {
+                label: 'Output 1',
+              },
+              output_2: {
+                label: 'Output 2',
+              },
+              output_3: {
+                label: 'Output 3',
+              }
+            }
+          }
+        }
+      }
+    };
+
+    // Apply the plugin on a standard, empty div...
+    $('#example_1').flowchart({
+      data: data
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
