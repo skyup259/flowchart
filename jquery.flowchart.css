@@ -1,6 +1,10 @@
 
+.flowchart-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .flowchart-links-layer, .flowchart-operators-layer, .flowchart-temporary-link-layer {
-    position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -141,4 +145,3 @@
     display: table-cell;
     width: 50%;
 }
-

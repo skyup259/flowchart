@@ -43,14 +43,13 @@ $(document).ready(function() {
 
   // Apply the plugin on a standard, empty div...
   var $flowchart = $('#example_1');
-  console.log($flowchart);
+  //console.log($flowchart);
   $flowchart.flowchart({
     data: data
   });
   
   var operatorI = 0;
   $(".create_operator").click(function() {
-    console.log("create operator");
     var operatorId = 'created_operator_' + operatorI;
     var operatorData = {
       top: 60,
@@ -76,7 +75,7 @@ $(document).ready(function() {
   });
   
   $(".delete_selected_button").click(function() {
-    console.log("delete link");
+    //console.log("delete link");
     $flowchart.flowchart('deleteSelected');
   });
 });
