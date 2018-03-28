@@ -10,6 +10,9 @@ $(document).ready(function() {
           outputs: {
             output_1: {
               label: 'Output 1',
+            },
+            output_2: {
+              label: 'output 2',
             }
           }
         }
@@ -27,10 +30,31 @@ $(document).ready(function() {
               label: 'Input 2',
             },
           },
+          outputs: {
+            output_1: {
+              label: 'Output 1',
+            }
+          }
+        }
+      },
+      operator3: {
+        top: 80,
+        left: 600,
+        properties: {
+          title: 'Operator 3',
+          inputs: {
+            input_1: {
+              label: 'Input 1',
+            },
+            input_2: {
+              label: 'Input 2',
+            },
+          },
           outputs: {}
         }
       },
     },
+   
     links: {
       link_1: {
         fromOperator: 'operator1',
@@ -38,6 +62,18 @@ $(document).ready(function() {
         toOperator: 'operator2',
         toConnector: 'input_2',
       },
+      link_2: {
+        fromOperator: 'operator1',
+        fromConnector: 'output_1',
+        toOperator: 'operator3',
+        toConnector: 'input_1',
+      },
+      link_3: {
+        fromOperator: 'operator2',
+        fromConnector: 'output_1',
+        toOperator: 'operator3',
+        toConnector: 'input_2',
+      }
     }
   };
 
@@ -78,4 +114,5 @@ $(document).ready(function() {
     //console.log("delete link");
     $flowchart.flowchart('deleteSelected');
   });
+
 });

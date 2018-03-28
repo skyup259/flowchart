@@ -11,9 +11,9 @@ $(function () {
               defaultOperatorClass: 'flowchart-default-operator',
               defaultLinkColor: '#3366ff',
               defaultSelectedLinkColor: 'black',
-              linkWidth: 10,
+              linkWidth: 5,
               grid: 20,
-              multipleLinksOnOutput: false,
+              multipleLinksOnOutput: true,
               multipleLinksOnInput: false,
               linkVerticalDecal: 0,
               onOperatorSelect: function (operatorId) {
