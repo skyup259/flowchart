@@ -84,7 +84,7 @@ $(document).ready(function() {
     data: data
   });
   
-  var operatorI = 0;
+  var operatorI = 1;
   $(".create_operator").click(function() {
     var operatorId = 'created_operator_' + operatorI;
     var operatorData = {
@@ -113,6 +113,17 @@ $(document).ready(function() {
   $(".delete_selected_button").click(function() {
     //console.log("delete link");
     $flowchart.flowchart('deleteSelected');
+  });
+
+  $(".get_data").click(function() {
+    var data = $flowchart.flowchart('getData');
+    $('#data').val(JSON.stringify(data, null, 2));
+   // console.log(data);
+  });
+
+  $(".set_data").click(function() {
+    var data = JSON.parse($('#data').val());
+    $flowchart.flowchart('setData', data);
   });
 
 });
